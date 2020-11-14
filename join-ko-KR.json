@@ -10,16 +10,6 @@
     "language": "ko-KR"
   },
   {
-    "key": "join_headline",
-    "value": "휴대폰 번호를 입력해주세요",
-    "language": "ko-KR"
-  },
-  {
-    "key": "join_subtitle",
-    "value": "회원가입을 위해 필요합니다",
-    "language": "ko-KR"
-  },
-  {
     "key": "doLogin",
     "value": "<b><u>로그인 하기</u></b>",
     "language": "ko-KR"
@@ -32,6 +22,56 @@
   {
     "key": "password_headline",
     "value": "비밀번호를 입력해주세요.",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_headline_1",
+    "value": "휴대폰 번호를 입력해주세요",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_subtitle_1",
+    "value": "회원가입을 위해 필요합니다",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_headline_2",
+    "value": "간편비밀번호를 입력해주세요",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_subtitle_2",
+    "value": "로그인을 위해 사용됩니다",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_headline_3",
+    "value": "생년월일을 입력해주세요",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_subtitle_3",
+    "value": "기본 정보로 활용됩니다.",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_headline_4",
+    "value": "성별을 선택해주세요",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_subtitle_4",
+    "value": "기본 정보로 활용됩니다.",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_headline_5",
+    "value": "별명을 입력해주세요.",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_subtitle_5",
+    "value": "최소 2자 ~ 최대 6자. 한글, 영문으로 지어주세요 입력하지 않으면 랜덤으로 정해집니다.",
     "language": "ko-KR"
   },
   {
