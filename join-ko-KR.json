@@ -8,5 +8,55 @@
     "key": "password_subtitle2",
     "value": "<u>비밀번호 찾기</u>",
     "language": "ko-KR"
+  },
+  {
+    "key": "join_headline",
+    "value": "휴대폰 번호를 입력해주세요",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_subtitle",
+    "value": "회원가입을 위해 필요합니다",
+    "language": "ko-KR"
+  },
+  {
+    "key": "doLogin",
+    "value": "<b><u>로그인 하기</u></b>",
+    "language": "ko-KR"
+  },
+  {
+    "key": "doSignIn",
+    "value": "회원가입하기",
+    "language": "ko-KR"
+  },
+  {
+    "key": "password_headline",
+    "value": "비밀번호를 입력해주세요.",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_guideText_1",
+    "value": "<b>1/5</b> 만나서 반가워요 :)",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_guideText_2",
+    "value": "<b>2/5</b> 절반이나 했어요",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_guideText_3",
+    "value": "<b>3/5</b> 거의 다 왔어요",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_guideText_4",
+    "value": "<b>4/5</b> 조금만 더 으쌰으쌰",
+    "language": "ko-KR"
+  },
+  {
+    "key": "join_guideText_5",
+    "value": "<b>5/5</b> 회원가입을 완료하면 이용약관에 동의하게 됩니다.",
+    "language": "ko-KR"
   }
 ]
