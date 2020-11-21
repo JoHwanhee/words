@@ -1,6 +1,7 @@
 [ 
   {
-    "id": "a001",
+    "id": "qs001",
+    "quiz_ids": ["q001","q002"],
     "guideText": "ㅅㅐ 문제를 풀어보세용",
     "alarmTime": "03:00",
     "startText" : "시작하기",
