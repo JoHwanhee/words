@@ -3,7 +3,15 @@
     "id": "qs001",
     "quiz_ids": ["q001","q002"],
     "guideText": "ㅅㅐ 문제를 풀어보세용",
-    "alarmTime": "03:00",
+    "alarmTime": "오후 03:00",
+    "startText" : "시작하기",
+    "canStart": true
+  },
+  {
+    "id": "qs002",
+    "quiz_ids": ["q001","q002"],
+    "guideText": "ㅅㅐ 문제를 풀어보세용",
+    "alarmTime": "오후 09:00",
     "startText" : "시작하기",
     "canStart": true
   }
