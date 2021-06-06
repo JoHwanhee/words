@@ -1,6 +1,6 @@
 [
   {
-    "key" : "apiServer"
-    "value": "https://plz-grammar.herokuapp.com"
+    "key" : "apiServer",
+    "value" : "https://plz-grammar.herokuapp.com"
   }
 ]
