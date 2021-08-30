@@ -44,10 +44,10 @@ services:
     expose:
       - "3306"
     environment:
-      - MYSQL_ROOT_PASSWORD={$ROOT_PW}
+      - MYSQL_ROOT_PASSWORD=1234
       - MYSQL_DATABASE=ghostdata
       - MYSQL_USER=ghost
-      - MYSQL_PASSWORD={$DB_PW}
+      - MYSQL_PASSWORD=1234
     restart: always
     networks:
       - ghost-net
