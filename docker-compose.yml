@@ -48,6 +48,7 @@ services:
       - MYSQL_DATABASE=ghostdata
       - MYSQL_USER=ghost
       - MYSQL_PASSWORD=1234
+    command: mysqld --innodb-buffer-pool-size=64M
     restart: always
     networks:
       - ghost-net
