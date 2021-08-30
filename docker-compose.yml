@@ -9,8 +9,8 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./nginx/ssl/blog.heja.kr.key:/etc/nginx/blog.heja.kr.key:ro
-      - ./nginx/ssl/blog.heja.kr.crt:/etc/nginx/blog.heja.kr.crt:ro
+      - ./nginx/ssl/blog.heja.kr.key:/etc/nginx/blog.floraum.co.kr.key:ro
+      - ./nginx/ssl/blog.heja.kr.crt:/etc/nginx/blog.floraum.co.kr.crt:ro
       - ./nginx/conf/ghost.conf:/etc/nginx/conf.d/ghost.conf:z
     restart: always
     networks:
