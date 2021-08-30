@@ -1,0 +1,43 @@
+{
+    "url": "https://blog.floraum.co.kr",
+    "server": {
+        "port": 2368,
+        "host": "0.0.0.0"
+    },
+    "database": {
+        "client": "mysql",
+        "connection": {
+            "host": "mysql",
+            "port": 3306,
+            "user": "ghost",
+            "password": "1234",
+            "database": "ghostdata",
+            "charset": "utf8mb4"
+        }
+    },
+    "mail": {
+        "from": "'Jayden' <hhjo@floraum.co.kr>", 
+        "transport": "SMTP",
+        "service": "Gmail",
+        "logger": true,
+        "options": {
+            "host": "smtp.gmail.com",
+            "port": 465,
+            "secureConnection": true,
+            "auth": {
+                "user": "hhjo@floraum.co.kr",
+                "pass": "{$MAIL_PW}"
+            }
+        }
+    },
+    "logging": {
+        "transports": [
+            "file",
+            "stdout"
+        ]
+    },
+    "process": "systemd",
+    "paths": {
+        "contentPath": "/var/lib/ghost/content"
+    }
+}
