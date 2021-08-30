@@ -1,0 +1,56 @@
+version: '3.1'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    hostname: ghost-nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/ssl/blog.heja.kr.key:/etc/nginx/blog.heja.kr.key:ro
+      - ./nginx/ssl/blog.heja.kr.crt:/etc/nginx/blog.heja.kr.crt:ro
+      - ./nginx/conf/ghost.conf:/etc/nginx/conf.d/ghost.conf:z
+    restart: always
+    networks:
+      - ghost-net
+    depends_on:
+      - ghost
+
+  ghost:
+    image: ghost:latest
+    container_name: ghost
+    hostname: ghost
+    volumes:
+      - ./ghost/config.production.json:/var/lib/ghost/config.production.json:z #overwrite default settings 
+      - ./ghost/content:/var/lib/ghost/content:z
+    expose:
+      - 2368
+    environment:
+      - NODE_ENV=production
+    restart: always
+    networks:
+      - ghost-net
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    hostname: mysql
+    volumes:
+       - ./dbdata:/var/lib/mysql:z
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD={$ROOT_PW}
+      - MYSQL_DATABASE=ghostdata
+      - MYSQL_USER=ghost
+      - MYSQL_PASSWORD={$DB_PW}
+    restart: always
+    networks:
+      - ghost-net
+
+networks:
+  ghost-net:
