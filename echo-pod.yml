@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: echo
-          image: ghcr.io/subicura/echo:v2
+          image: ghcr.io/subicura/echo:v1
