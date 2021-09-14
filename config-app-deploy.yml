@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-app-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: config
+        tier: app
+    spec:
+      containers:
+        - name: config
+          image: docker.io/kikiki0611/conf-app:latest
