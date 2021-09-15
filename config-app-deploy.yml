@@ -17,3 +17,19 @@ spec:
       containers:
         - name: config
           image: docker.io/kikiki0611/conf-app:latest
+          ports:
+            - containerPort: 8888
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: config-app-service
+spec:
+  ports:
+    - port: 8888
+      protocol: TCP
+  selector:
+    app: config
+    tier: app
