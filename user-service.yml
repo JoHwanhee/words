@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: '{cipher}6eb2fcd69f1a5e5432047eca0a954ed3d60df8f0ea4c9164f1c18f1be014df2a'
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: user
+    password: '{cipher}6a0aea7b8d38bfeacb8a57f0f41015507d7a4fc12b951c29ebea0a3c4f8624ef'
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+
+token:
+  expiration_time: 86400000
+  secret: user_token_changed
+
+gateway:
+  ip: 127.0.0.1
+
+server:
+  port: 0
+  error:
+    include-exception: false
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+greeting:
+  message: Wellcome to User service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh
