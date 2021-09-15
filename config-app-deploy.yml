@@ -35,17 +35,3 @@ spec:
   selector:
     app: config
     tier: app
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: config-lb
-spec:
-  type: LoadBalancer
-  ports:
-    - port: 8888
-      targetPort: 31000
-      protocol: TCP
-  selector:
-    app: config
-    tier: app
