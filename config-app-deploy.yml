@@ -27,9 +27,11 @@ kind: Service
 metadata:
   name: config-app-service
 spec:
+  type: NodePort
   ports:
     - port: 8888
       protocol: TCP
+      nodePort: 8888
   selector:
     app: config
     tier: app
