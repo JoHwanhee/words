@@ -31,7 +31,7 @@ spec:
   ports:
     - port: 8888
       protocol: TCP
-      nodePort: 8888
+      nodePort: 31000
   selector:
     app: config
     tier: app
