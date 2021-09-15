@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: config-app-deploy
+  name: config-app
 spec:
   replicas: 1
   selector:
@@ -17,15 +17,12 @@ spec:
       containers:
         - name: config
           image: docker.io/kikiki0611/conf-app:latest
-          ports:
-            - containerPort: 8888
-              protocol: TCP
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: config-app-service
+  name: config-app
 spec:
   ports:
     - port: 8888
@@ -37,7 +34,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: config-app-ingress
+  name: config-app
 spec:
   rules:
     - host: v1.config.dev.floraum.co.kr.sslip.io
@@ -47,6 +44,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: config-app-service
+                name: config-app
                 port:
                   number: 8888
