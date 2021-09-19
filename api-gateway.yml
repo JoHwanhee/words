@@ -18,7 +18,7 @@ spec:
         - name: gateway
           image: docker.io/kikiki0611/api-gateway:latest
           ports:
-            - containerPort: 8888
+            - containerPort: 8000
               protocol: TCP
 
 ---
@@ -28,7 +28,7 @@ metadata:
   name: gateway-app-service
 spec:
   ports:
-    - port: 8888
+    - port: 8000
       protocol: TCP
   selector:
     app: gateway
