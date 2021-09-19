@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: config-app-deploy
+  name: eureka-app-deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: config
+      app: eureka
       tier: app
   template:
     metadata:
       labels:
-        app: config
+        app: eureka
         tier: app
     spec:
       containers:
-        - name: config
+        - name: eureka
           image: docker.io/kikiki0611/ecommers:latest
           ports:
             - containerPort: 8761
@@ -25,11 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: config-app-service
+  name: eureka-app-service
 spec:
   ports:
     - port: 8761
       protocol: TCP
   selector:
-    app: config
+    app: eureka
     tier: app
