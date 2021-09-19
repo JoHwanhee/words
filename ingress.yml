@@ -4,7 +4,7 @@ metadata:
   name: config-app-ingress
 spec:
   rules:
-    - host: dev.floraum.co.kr
+    - host: config.floraum.co.kr
       http:
         paths:
           - path: /
