@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-app-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: gateway
+        tier: app
+    spec:
+      containers:
+        - name: gateway
+          image: docker.io/kikiki0611/api-gateway:latest
+          ports:
+            - containerPort: 8888
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway-app-service
+spec:
+  ports:
+    - port: 8888
+      protocol: TCP
+  selector:
+    app: gateway
+    tier: app
