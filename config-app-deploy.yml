@@ -13,7 +13,7 @@ spec:
               service:
                 name: config-app-service
                 port:
-                  number: 3000
+                  number: 8888
 ---
 apiVersion: apps/v1
 kind: Deployment
