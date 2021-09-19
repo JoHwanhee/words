@@ -8,10 +8,12 @@ spec:
   selector:
     matchLabels:
       app: eureka
+      tier: app
   template:
     metadata:
       labels:
         app: eureka
+        tier: app
     spec:
       containers:
       - name: eureka
