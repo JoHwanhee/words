@@ -21,7 +21,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: eureka-service
+                name: eureka-app-service
                 port:
                   number: 8761
                   
