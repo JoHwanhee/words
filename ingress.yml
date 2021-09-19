@@ -25,3 +25,14 @@ spec:
                 port:
                   number: 8761
                   
+    - host: api.floraum.co.kr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gateway-app-service
+                port:
+                  number: 8000
+                  
